@@ -56,7 +56,7 @@ class particle_system:
 
 def init_opengl():
     glEnable(GL_POINT_SMOOTH)
-    glPointSize(100)
+    glPointSize(10)
     glClearColor(0,0,0,1)
 
 def main(num_particles):
@@ -64,6 +64,7 @@ def main(num_particles):
     screen = pygame.display.set_mode((WINDOW_HEIGHT,WINDOW_WIDTH), DOUBLEBUF | OPENGL)
     pygame.display.set_caption("Particle Popsickle 9000")
 
+    init_opengl()
     gluPerspective(45, (800/600), 0.1, 50.0)
     glTranslatef(0.0, 0.0, -5)
     
